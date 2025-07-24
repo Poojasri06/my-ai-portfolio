@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pooja | AI Engineer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Hero Section -->
+  <header class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-purple-400">Hi, I'm Pooja sri </h1>
+    <p class="text-lg md:text-xl text-gray-300">Aspiring AI Engineer | Robotics & ML Enthusiast</p>
+
+    <!-- Audio Greeting -->
+    <!-- Audio Greeting (Autoplay with Fallback) -->
+<audio id="introAudio" preload="auto">
+  <source src="assets/pooja-intro.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('introAudio');
+
+    // Try autoplay
+    audio.play().catch(() => {
+      // Autoplay failed — create manual play button
+      const playBtn = document.createElement('button');
+      playBtn.textContent = "🔊 Play Greeting";
+      playBtn.className = "mt-4 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded";
+      playBtn.onclick = () => {
+        audio.play();
+        playBtn.remove(); // Remove button once played
+      };
+
+      // Append button under main header
+      const hero = document.querySelector("header");
+      hero.appendChild(playBtn);
+    });
+  });
+</script>
+
+    <div class="mt-6">
+      <a href="assets/Poojasri_Resume.pdf" download class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full font-medium">Download Resume</a>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="p-8 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-8 text-center">🚀 Featured Projects</h2>
+    <div class="grid gap-8 md:grid-cols-2">
+
+      <!-- Project 1 -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+        <img src="assets/aura-derm.jpg" alt="Aura Derm" class="w-full h-56 object-cover" />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-purple-300">Aura Derm – AI Skincare Advisor</h3>
+          <p class="mt-2 text-gray-400">Detects facial skin issues like acne and pigmentation using CNN and recommends personalized skincare, acids, and diets with review-based NLP filtering.</p>
+          <p class="mt-2 text-sm text-gray-500">Python · PyTorch · Streamlit · OpenCV</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+        <img src="assets/robot.jpg" alt="Humanoid Robot" class="w-full h-56 object-cover" />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-purple-300">Mini Basic Humanoid Robot</h3>
+          <p class="mt-2 text-gray-400">Arduino-based robot with IR and ultrasonic sensors, working motor wheels, Bluetooth control, and a functional robotic arm for basic object interaction.</p>
+          <p class="mt-2 text-sm text-gray-500">Arduino Uno · Sensors · C++ · Robotics</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+        <img src="assets/titanic.jpg" alt="Titanic Prediction" class="w-full h-56 object-cover" />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-purple-300">Titanic Survival Prediction</h3>
+          <p class="mt-2 text-gray-400">ML model trained to predict survival using logistic regression and data preprocessing based on age, class, gender, and fare.</p>
+          <p class="mt-2 text-sm text-gray-500">Python · Pandas · Scikit-learn</p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+        <img src="assets/stock-app.jpg" alt="Stock App" class="w-full h-56 object-cover" />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-purple-300">Stock Suggestion App</h3>
+          <p class="mt-2 text-gray-400">ML-based app that recommends best-performing stocks using past data trends and time series models with login verification and user interface.</p>
+          <p class="mt-2 text-sm text-gray-500">Python · Streamlit · Pandas · Login Auth</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="p-8 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-6">🧠 Skills & Tools</h2>
+    <div class="flex flex-wrap gap-4 justify-center text-sm text-gray-300">
+      <span class="bg-gray-700 px-4 py-2 rounded-full">Python</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">TensorFlow</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">PyTorch</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">Arduino</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">OpenCV</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">Streamlit</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">Scikit-learn</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">HTML & CSS</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">machine learning</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">Robotics</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">NLP</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">deep learning</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">Data Analysis</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">Git & GitHub</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">bot deployment</span>
+      <span class="bg-gray-700 px-4 py-2 rounded-full">Data Visualization</span>    
+     <span class="bg-gray-700 px-4 py-2 rounded-full">Time Series Analysis</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Data Preprocessing</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Login Authentication</span>    
+        <span class="bg-gray-700 px-4 py-2 rounded-full">API Integration</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Data Cleaning</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Data Mining</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">prompt engineering</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Data Modeling</span>   
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Data Structures</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Algorithms</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Computer Vision</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Data Engineering</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">Data Science</span>  
+        <span class="bg-gray-700 px-4 py-2 rounded-full">tensorflow</span>  
+        <span class="bg-gray-700 px-4 py-2 rounded-full">PyTorch</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">AI animation</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">AI Chatbot</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">ethical hacking and cybersecurity</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">AI Ethics</span>
+        <span class="bg-gray-700 px-4 py-2 rounded-full">internet of things</span>
+</div>
+    
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer class="bg-gray-950 p-8 text-center text-gray-400 text-sm">
+    <p>© 2025 Pooja Sri — AI Engineer Portfolio</p>
+    <p>Contact: <a href="mailto:your-poojasrikumar006@gmail.com" class="text-purple-400">your-email@gmail.com</a> | 
+       <a href="https://www.linkedin.com/in/pooja-sri-b25053286" class="text-purple-400">LinkedIn</a></p>
+  </footer>
+
+</body>
+</html>
